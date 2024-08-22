@@ -1,0 +1,87 @@
+// /* Cambiar el color de fondo del Menubar */
+// ::ng-deep .p-menubar {
+//     background-color: #0066A0; /* Fondo del Menubar */
+// }
+
+// /* Cambiar el color del texto en el Menubar */
+// ::ng-deep .p-menubar .p-menuitem-text {
+//     color: white; /* Color del texto */
+// }
+
+// /* Cambiar el color de los íconos en el Menubar */
+// ::ng-deep .p-menubar .pi {
+//     color: white; /* Color de los íconos */
+// }
+
+// /* Cambiar el fondo del menú desplegable en modo móvil */
+// ::ng-deep .p-menubar .p-menubar-root-list {
+//     background-color: #0066A0; /* Fondo del menú desplegable */
+//     color: white; /* Color del texto en el menú desplegable */
+// }
+
+// /* Cambiar el fondo de los submenús (si los hay) */
+// ::ng-deep .p-menubar .p-submenu-list {
+//     background-color: #0066A0; /* Fondo de los submenús */
+// }
+
+// /* Estilo de los enlaces en los distintos estados */
+// ::ng-deep .p-menubar .p-menuitem-link {
+//     background-color: #0066A0; /* Fondo por defecto del enlace */
+//     color: white; /* Color por defecto del texto */
+//     text-decoration: none; /* Sin subrayado */
+// }
+
+// /* :hover - Cuando el enlace es hovered */
+// ::ng-deep .p-menubar .p-menuitem-link:hover {
+//     background-color: #005b90; /* Fondo cuando el enlace es hovered */
+//     color: white;
+// }
+
+// /* :focus - Cuando el enlace está enfocado */
+// ::ng-deep .p-menubar .p-menuitem-link:focus {
+//     background-color: #005b90; /* Fondo cuando el enlace está enfocado */
+//     color: white;
+//     outline: none; /* Elimina el borde de enfoque si lo hay */
+// }
+
+// /* :active - Cuando el enlace es activo (cuando se hace clic) */
+// ::ng-deep .p-menubar .p-menuitem-link:active {
+//     background-color: #004f7f; /* Fondo cuando el enlace está siendo clicado */
+//     color: white;
+// }
+
+// /* :visited - Cuando el enlace ya ha sido visitado */
+// ::ng-deep .p-menubar .p-menuitem-link:visited {
+//     background-color: #0066A0; /* Fondo cuando el enlace ya ha sido visitado */
+//     color: white;
+// }
+
+// /* Estilo de los botones del menubar */
+// ::ng-deep .p-menubar-button {
+//     color: white;
+// }
+
+// ::ng-deep .p-menubar-button:hover {
+//     background-color: #1c7bb3e5;
+// }
+.card{
+    display: flex;
+    background-color: #0066A0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    ul{
+        display: flex;
+        gap: 16px;
+        list-style: none;
+        li{
+            cursor: pointer;
+            color: white;
+            padding: 4px 8px;
+        }
+        li:hover{
+            color:rgb(222, 226, 1);
+            background-color: #0276b9;
+        }
+    }
+}

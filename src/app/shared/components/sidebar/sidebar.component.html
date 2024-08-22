@@ -1,0 +1,18 @@
+
+<div class="card flex justify-content-center " style="margin: 48px; color: white;">
+    <div style="margin: 0 auto;">
+        <span>Sus Tableros</span>
+        <ul>
+            <li>Tabla1</li>
+            <li>Tabla2</li>
+        </ul>
+        @if (loginState) {
+        <ul>
+            @for (item of boards; track $index) {
+                <li>{{item.name}}</li>
+            }
+        </ul>
+        }
+    </div>
+</div>
+
