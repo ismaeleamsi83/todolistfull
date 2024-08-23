@@ -8,16 +8,20 @@ import { DialogModule } from 'primeng/dialog';
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
 import { timestamp } from 'rxjs';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [MenubarModule, CommonModule, DialogModule, ButtonModule, InputTextModule],
+  imports: [MenubarModule, CommonModule, DialogModule, ButtonModule, InputTextModule, FormsModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent implements OnInit {
   items: MenuItem[];
+
+  name: string = "";
+  description: string = "";
 
   visible: boolean = false;
 
@@ -68,20 +72,25 @@ export class HeaderComponent implements OnInit {
   }
 
   addNewBoard(){
-    const newBoard = {
-      id: 4,
-      name: "nuevoboard",
-      description: "nueva descripcion",
-      status: "estado operativo",
-      deadline: new Date,
-      listTask: []
+    console.log(this.name);
+    if(this.name !== '' && this.description !== ''){
+      const newBoard = {
+        id: 4,
+        name: this.name,
+        description: this.description,
+        status: "estado operativo",
+        deadline: new Date,
+        listTask: []
+      }
+      this.tasksService.addNewBoard(newBoard);
+      //console.log("click desde component");
+      setTimeout(()=>{
+        this.tasksService.board$.subscribe(item => console.log(item));
+      },2000);
     }
-    this.tasksService.addNewBoard(newBoard);
-    //console.log("click desde component");
-    setTimeout(()=>{
-      this.tasksService.board$.subscribe(item => console.log(item));
-    },2000);
     
+    this.name = "";
+    this.description = "";
   }
 
 
